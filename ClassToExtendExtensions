@@ -1,0 +1,15 @@
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+namespace DefaultNamespace
+{
+    public static class ClassToExtendExtensions
+    {
+        public static T? GetRandomItem<T>(this IEnumerable<T> enumerable)
+        {
+            List<T> list = enumerable.ToList();
+            return list.ElementAtOrDefault(Random.Range(0, list.Count));
+        }
+    }
+}
