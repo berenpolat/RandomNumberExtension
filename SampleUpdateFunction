@@ -1,0 +1,20 @@
+private void Update()
+        {
+            randomNumbers.Add(0);
+            randomNumbers.Add(1);
+
+            if (randomNumbers.GetRandomItem() == 0)
+            {
+                Enemy normalEnemy = enemyFactory.CreateEnemy(EnemyType.Normal);
+                normalEnemy.Move();
+                normalEnemy.Attack();
+            }
+
+            if (randomNumbers.GetRandomItem() == 1)
+            {
+                Enemy strongEnemy = enemyFactory.CreateEnemy(EnemyType.Strong);
+                strongEnemy.Move();
+                strongEnemy.Attack();
+            }
+            
+            //Sample Updat function that i have cretaed to test my extension.
